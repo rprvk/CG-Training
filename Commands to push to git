@@ -1,0 +1,14 @@
+ 1  git init
+    2  git add MyPractice
+    3  git commit -m "MyPractice"
+    4  git commit -m "Added MyPractice"
+    5   git config --global user.email ragalapalli.rohini.123@gmail.com
+    6   git config --global user.name rprvk
+    7  git commit -m "Added MyPractice"
+    8  git add
+    9  git add .
+   10  git commit -m "MyPractice"
+   11  git branch -M main
+   12  git remote add origin https://github.com/rprvk/CG-Training.git
+   13  git push -u origin main
+   14  history

@@ -1,0 +1,77 @@
+
+DOCKER COMMANDS:
+
+   1 docker -v
+   2 docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=rprvk3 -d postgres
+   3 docker images
+   4 docker ps
+
+_________________________________________________________________
+DOCKERIZARION
+===============================================================
+create executable jar file
+
+1. Run the project by connecting with postgresql
+2. Then from pom.xml run as maven build(2)- give command "clean package" or "clean compile install" in goal and run
+3. If you get error and not builds, then give annotation @ContextConfiguration in src/test/java class
+4. If still getting errors then in step 2 give command
+   "clean package -Dskip Tests" and run
+5. See if jar file created or not and then give that in Dockerfile.
+(This is all process for converting jar file into image)
+
+
+6.Now open properties and go to file location and open cmd and give command "java -jar <jarfileName.jar>"
+
+_________________________________________________________________________________
+
+
+create docker file
+
+To dockerize the application we move this jar file to docker image and docker container will take care of rest.
+Now go to root directory and create a docker file
+
+FROM openjdk:11  # means we are taking open jdk as a base or parent image and building on top of it.
+VOLUME: /tmp     # volume temporary. It is need for spring, because tomcat will create an internal work folder
+Add taget/<file.jar> <modifiedName.jar>  # here we are adding our jar from taget location in internal location to name app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+
+_______________________________________________________________________________3.build docker image
+
+Now open cmd from docker file location and give following commands
+
+docker build -t hrms .  #it builds docker image  #hrms is the name I given to image, we can give any
+docker image ls         #it gives docker image created. (it gives repository, tag, image ID, time taken and size)
+_________________________________________________________________________________
+
+run docker container
+
+To tun our application we need to give command
+
+docker run <imageName>  
+
+#before this we have to do port mapping, because our app will run on virtual machine
+#so give command 
+
+docker run -p8081:8081 <imageName> or expose it form docker file #EXPOSE 8080
+
+#then check with the port number which is used here.
+Now run and check the output in browser.  The docker will run the application and give some response.
+_______________________________________________________________________
+
+To stop the container we need container ID
+
+get container Id by command
+
+docker ps
+
+then give
+
+docker container stop <containerID>
+____________________________________________________________
+
+docker ps -a  #will list all the container
+
+Now to run the same container again
+
+docker container run <containerID>
+_______________________________________________________________

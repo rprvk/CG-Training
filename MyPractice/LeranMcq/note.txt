@@ -1,0 +1,116 @@
+1.
+match the following
+tree set -> b
+hashset -> a
+hashmap -> d
+hashtable -> c
+
+a. unorder unsorted unique collection of object
+b. sorted and unqieu collection of object
+c.unorder collection of key value with unqieu key unsorted and unorder
+c. Synchronized collection of key value pair where the key are unqieu unsorted and unorder
+d. collection of key value pair wher ekey are unique unsorted and unordered one null key is allowed
+_____________________________________________________________________________________________
+
+2.
+which collection class allows you to grow or shrink its size and provide index access to its elements but whose method are not synchronized
+a. java.util.vecto
+b. java.util.LinkedHasSet     
+c. Java.util.list
+d. java.util.array.list ->
+______________________________________________________________________________________________
+
+3.
+q: whihc of the following code snippet represet the correct way to fetch a single person details in controlled class
+@GetMapping ->
+@putMNapping
+@post mapping
+@autowired
+________________________________________________________________________________________________
+4.
+what are the annotation you can use to handle global exeption in spring
+
+Controller Advice
+The @ControllerAdvice is an annotation, to handle the exceptions globally.
+
+Exception Handler
+The @ExceptionHandler is an annotation used to handle the specific exceptions and sending the custom responses to the client.
+_____________________________________________________________________________________________________
+
+5.
+choose the correct option to get instance of Entity Mnager Factor
+
+createEntityManagerFactory() method - The role of this method is to create and return an EntityManagerFactory
+ for the named persistence unit. Thus, this method contains the name of persistence unit passed in the Persistence.xml file.
+__________________________________________________________________________________________________________
+
+6.
+which of the following option represent the correct impelemtnation of Delete a user object based on UserID
+
+so to do the same use @RequestMapping Value
+__________________________________________________________________________________________________________
+
+7.
+Which of the following annotation allow you to send custom HTTP Status code along with proper message in case of exception
+
+@RequestMapping  and ResponseEntity
+______________________________________________________________________________________________________________
+
+8.
+I want to generate transation automatically which annotation should be added 
+
+@SpringAutoConfig
+___________________________________________________________________________________________________________
+
+9.
+which annotation is used to create pk-fk in jpa assocaited relationship
+
+@JoinColumn
+__________________________________________________________________________________
+
+10.
+consider book entity class with property as bookid bookname book rpice. you need to find out all books having price greated than input value
+
+
+______________________________________________________________________________________________
+
+11.
+jpaContext.xml file to allow spring to manage transaction using annotatyion
+
+@Transaction
+_________________________________________________________________________
+
+12.
+how to declare an JPA entity class
+ 
+It is simply a POJO class, and declared using @Entity from persistence pack
+______________________________________________________________________
+
+13.
+the @GetMapping(*/notes{id*} is same as}
+
+
+________________________________________________________________________
+
+14.
+how to create a global exception handler class in spring
+
+@ExceptionHandler annotation is required to handle the type of exceptions 
+which are thrown and the corresponding method will be able to handle the exceptions.
+____________________________________________________________
+
+15.
+how to instantiate a spring ioc container
+
+Using application Context
+
+The Spring IoC Container An IoC container is a common characteristic of frameworks that implement IoC. 
+In the Spring framework, the IoC container is represented by the interface ApplicationContext. 
+The Spring container is responsible for instantiating, configuring and assembling objects known as beans, 
+as well as managing their lifecycle.
+_____________________________________________________________________________________-
+
+16.
+a user want to avoid the usage of xml configuration in her spring application. also he dont want to use any 
+explicit server for deployment of an applciation which component is to be used in development environment to achieve the task
+
